@@ -77,3 +77,106 @@ nav img {
 #checkbox:checked + .toggle {
   transform: rotate(-90deg);
 }
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: whitesmoke;
+  color: #171d25;
+  font-family: "Work Sans", sans-serif;
+  font-size: 30px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  display: none;
+  border-radius: 10px;
+}
+aside li {
+  list-style: none;
+  margin-top: 50px;
+}
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+aside li:hover {
+  cursor: pointer;
+  border-bottom: solid 5px #1a9fff;
+  border-radius: 4px;
+  color: #1a9fff;
+  scale: 1.4;
+  transition: 0.2s;
+}
+.button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: red;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #171d25;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #171d25;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: #171d25;
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.button:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}

@@ -11,18 +11,32 @@
       <nav>
         <img src="./images/Logo.png" alt="Logo" />
         <div class="left">
-          <p id="Homebor">Home</p>
-          <p>About Us</p>
-          <p>Games</p>
+          <p id="Homebor" class="navbir">Home</p>
+          <p class="navbir">About Us</p>
+          <p class="navbir">Games</p>
           <input id="checkbox" type="checkbox" />
-          <label class="toggle" for="checkbox">
-            <div id="bar1" class="bars"></div>
-            <div id="bar2" class="bars"></div>
-            <div id="bar3" class="bars"></div>
+          <label class="toggle" for="checkbox" onclick="openNav()">
+            <div class="bars" id="icon"></div>
+            <div class="bars" id="icon"></div>
+            <div class="bars" id="icon"></div>
           </label>
+          <aside>
+            <ul>
+              <button class="button" onclick="closeNav()">
+                <span class="X"></span>
+                <span class="Y"></span>
+                <div class="close">Close</div>
+              </button>
+              <li class="hideOnMobile">Register</li>
+              <li class="hideOnMobile">Login</li>
+              <li class="hideOnMobile">Home</li>
+              <li class="hideOnMobile">About us</li>
+              <li class="hideOnMobile">Games</li>
+            </ul>
+          </aside>
         </div>
       </nav>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </html>
